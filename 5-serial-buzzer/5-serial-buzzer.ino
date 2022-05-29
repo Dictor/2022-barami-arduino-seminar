@@ -19,7 +19,7 @@ void loop()
     }
   }
   digitalWrite(buzzerPin, HIGH);
-  delayMicrosecond(delayTime / 2);
+  delayMicroseconds(delayTime / 2);
   digitalWrite(buzzerPin, LOW);
-  delayMicrosecond(delayTime / 2);
+  delayMicroseconds(delayTime / 2);
 }
