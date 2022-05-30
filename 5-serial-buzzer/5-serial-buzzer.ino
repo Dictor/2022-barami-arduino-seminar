@@ -1,10 +1,10 @@
 int buzzerPin = 13;
-int delayTime = 10000; // unit is microsecond, 10000 is 100hz
+long delayTime = 10000; // unit is microsecond, 10000 is 100hz
 
 void setup()
 {
   Serial.begin(9600);
-  Serial.setTimeout(0);
+  Serial.setTimeout(50);
   pinMode(buzzerPin, OUTPUT);
 }
 
@@ -17,9 +17,10 @@ void loop()
     {
       delayTime = 10000;
     }
+    Serial.println(delayTime);
   }
   digitalWrite(buzzerPin, HIGH);
-  delayMicroseconds(delayTime / 2);
+  delay(delayTime / 2);
   digitalWrite(buzzerPin, LOW);
-  delayMicroseconds(delayTime / 2);
+  delay(delayTime / 2);
 }
